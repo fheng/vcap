@@ -2,30 +2,30 @@
 
 * cloud_controller.yml
 
-    app_uris:
-      # Allow applications to register URIs that are outside your domain.
-      allow_external: true
-      reserved_list: [www, test, dash, register, foo, bar, everglade, feedhenry]
-      reserved_length: 3
-
-    uaa:
-      enabled: true
-      url: http://uaa.<domain>
+        app_uris:
+          # Allow applications to register URIs that are outside your domain.
+          allow_external: true
+          reserved_list: [www, test, dash, register, foo, bar, everglade, feedhenry]
+          reserved_length: 3
+    
+        uaa:
+          enabled: true
+          url: http://uaa.<domain>
 
 ## DEA
 
 * dea.yml
 
-# Secure environment for running applications in a multi tenant setup.
-secure: true
-
-runtimes:
-  - ruby18
-  - ruby19
-  - ruby193
-  - node
-  - node06
-  - node08
+        # Secure environment for running applications in a multi tenant setup.
+        secure: true
+        
+        runtimes:
+          - ruby18
+          - ruby19
+          - ruby193
+          - node
+          - node06
+          - node08
 
 
 ## Runtimes
@@ -36,7 +36,7 @@ runtimes:
 
 * stager.yml
 
-    secure: true
+        secure: true
 
 Need to ensure vcap-stager-users are created.
 
@@ -59,10 +59,10 @@ Verify users in passwd file e.g.
 
 * uaa.yml
 
-    uaa:
-      uris:
-        - uaa.<domain>
-        - login.<domain>
+        uaa:
+          uris:
+            - uaa.<domain>
+            - login.<domain>
 
 ## Components
 
