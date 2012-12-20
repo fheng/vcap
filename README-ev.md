@@ -76,3 +76,27 @@ Verify users in passwd file e.g.
 * mysql_node
 * redis_gateway
 * mysql_gateway
+
+## Stuff that should be changed
+
+        vcap@ip-10-32-40-210:~/cloudfoundry/.deployments/devbox/config$ grep -r "change" .
+        ./redis_gateway.yml:token: changeredistoken
+        ./postgresql_backup.yml:  pass: changeme
+        ./mysql_gateway.yml:token: changemysqltoken
+        ./filesystem_gateway.yml:token: changefilesystemtoken
+        ./postgresql_node.yml:  pass: changeme
+        ./rabbitmq_gateway.yml:token: changerabbitmqtoken
+        ./vblob_gateway.yml:token: changevblobtoken
+        ./health_manager.yml:    password: changeme
+        ./uaa.yml:    password: changeme
+        ./mongodb_gateway.yml:token: changemongodbtoken
+        ./cloud_controller.yml:    password: changeme
+        ./cloud_controller.yml:    token: changemysqltoken
+        ./cloud_controller.yml:    token: changeredistoken
+        ./cloud_controller.yml:    token: changemongodbtoken
+        ./cloud_controller.yml:    token: changerabbitmqtoken
+        ./cloud_controller.yml:    token: changepostgresqltoken
+        ./cloud_controller.yml:    token: changevblobtoken
+        ./cloud_controller.yml:    token: changefilesystemtoken
+        ./cloud_controller.yml:  token: ["changebrokertoken"]
+        ./postgresql_gateway.yml:token: changepostgresqltoken
